@@ -1,4 +1,4 @@
-<h1 align="center"> GitPoint </h1> <br>
+<h1 align="center"> Desarrollo de videojuegos </h1> <br>
 <p align="center">
   <a href="#">
     <img alt="GitPoint" title="Desarrollo de videojuegos" src="mando.png" width="450">
@@ -28,18 +28,18 @@
     <li>
       <a href="#about-the-project">Lecciones</a>
       <ul>
-        <li><a href="#leccion1">Leccion 1</a></li>
-        <li><a href="#leccion2">Leccion 2</a></li>
+        <li><a href="/prototipo1/">Leccion 1</a></li>
+        <li><a href="/prototipo2/">Leccion 2</a></li>
       </ul>
     </li>
     <li>
       <a href="#getting-started">Desafios</a>
       <ul>
-        <li><a href="#prerequisites">Desafio</a></li>
-        <li><a href="#installation">Desafio</a></li>
+        <li><a href="/gameRPG/">Desafio 1</a></li>
+        <li><a href="#">Desafio 2</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Más</a></li>
+    <li><a href="#mas">Más</a></li>
   </ol>
 </details>
 
