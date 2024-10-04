@@ -26,17 +26,23 @@
   <summary>Tabla de contenidos</summary>
   <ol>
     <li>
-      <a href="#about-the-project">Lecciones</a>
+      <a href="#">Lecciones</a>
       <ul>
         <li><a href="/prototipo1/">Leccion 1</a></li>
         <li><a href="/prototipo2/">Leccion 2</a></li>
+        <li><a href="#">Leccion 3</a></li>
+        <li><a href="#">Leccion 4</a></li>
+        <li><a href="#">Leccion 5</a></li>
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Desafios</a>
+      <a href="#">Desafios</a>
       <ul>
         <li><a href="/gameRPG/">Desafio 1</a></li>
         <li><a href="#">Desafio 2</a></li>
+        <li><a href="#">Desafío 3</a></li>
+        <li><a href="#">Desafío 4</a></li>
+        <li><a href="#">Desafío 5</a></li>
       </ul>
     </li>
     <li><a href="#mas">Más</a></li>
@@ -47,5 +53,5 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Introduction
+## Introducción
 Repositorio creado con el fin de recopilar los trabajos hechos en la materia
