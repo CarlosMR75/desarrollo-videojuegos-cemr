@@ -7,24 +7,76 @@
 
 <p align="center">
   Desarrollo de videojuegos
+      <br>
+    <a href="https://reponame/issues/new?template=bug.md">Report bug</a>
+    ·
+    <a href="https://reponame/issues/new?template=feature.md&labels=feature">Request feature</a>
 </p>
 
-<!-- <p align="center">
-  <a href="https://itunes.apple.com/us/app/gitpoint/id1251245162?mt=8">
-    <img alt="Lecciones" title="App Store" src="http://i.imgur.com/0n2zqHD.png" width="140">
-  </a>
+## Contenido
 
-  <a href="https://play.google.com/store/apps/details?id=com.gitpoint">
-    <img alt="Desafios" title="Google Play" src="http://i.imgur.com/mtGRPuM.png" width="140">
-  </a>
-</p> -->
+- [Contenido](#contenido)
+- [Introducción](#introducción)
+- [Código Fuente](#código-fuente)
+- [Planificación](#planificación)
+- [Autores](#autores)
+- [Copyright](#copyright)
 
-## Tabla de contenidos
+
+
+## Introducción
+
+- Nombre del proyecto
+- Objetivo.
+- Plataforma ,Género, Clasificación, Personajes,  Escenario.
+- Historia
+- Personajes
+- Reglas de Juego.
+- Pantallas de Juego
+- Plan de creación de VideoJuego.
+
+## Código Fuente
+
+* Lección 1
+  * > [Prototipo](/prototipo1)
+  * > [Desafio](/desafio1/)
+  * > [Package](/packages/lecciones/leccion1/prototipo1.unitypackage)
+  <!-- * > [Prueba](/prototipo1) -->
+* Lección 2
+  * > [Prototipo](/prototipo2)
+  <!-- * > [Laboratorio](/prototipo2)-->
+  * > [Package](/packages/lecciones/leccion2/ejercicio_carlos_mata.unitypackage)
+  * > [Prueba](/docs/lecciones/leccion2/Leccion2.docx)
+* Lección 3
+  * > [Prototipo]
+  <!-- * > Laboratorio
+  * > Desafío
+  * > Prueba -->
+* Lección 4
+  * > [Prototipo]
+  <!-- * > Laboratorio
+  * > Desafío
+  * > Prueba -->
+* Lección 5
+  * > [Prototipo]
+  <!-- * > Laboratorio
+  * > Desafío
+  * > Prueba -->
+* VideoJuego
+
+## Planificación
+
+
+## Autores
+Carlos Mata
+
+## Copyright
+Derechos Reservados 2022
+
+<!-- ## Tabla de contenidos -->
 
 <!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Tabla de contenidos</summary>
-  <ol>
+  <!-- <ol>
     <li>
       <a href="#">Lecciones</a>
       <ul>
@@ -46,12 +98,11 @@
       </ul>
     </li>
     <li><a href="#mas">Más</a></li>
-  </ol>
-</details>
+  </ol> -->
 
 
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## Introducción
-Repositorio creado con el fin de recopilar los trabajos hechos en la materia
+<!-- ## Introducción
+Repositorio creado con el fin de recopilar los trabajos hechos en la materia -->
