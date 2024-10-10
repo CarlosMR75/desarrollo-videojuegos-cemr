@@ -28,8 +28,8 @@
     <li>
       <a href="#">Lecciones</a>
       <ul>
-        <li><a href="/prototipo1/">Leccion 1</a></li>
-        <li><a href="/prototipo2/">Leccion 2</a></li>
+        <li><a href="/prototipo1/">Leccion 1 - Prototipo 1</a></li>
+        <li><a href="/prototipo2/">Leccion 2 - Prototipo 2</a></li>
         <li><a href="#">Leccion 3</a></li>
         <li><a href="#">Leccion 4</a></li>
         <li><a href="#">Leccion 5</a></li>
