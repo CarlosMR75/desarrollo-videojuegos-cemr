@@ -9,8 +9,12 @@
   Desafío No. 1
 </p>
 
+## Código Fuente
+
+* > [Package](../packages/desafios/desafio1/)
+
 <!-- TABLE OF CONTENTS -->
-<details>
+<!-- <details>
   <summary>Contenido del desafío</summary>
   <ol>
     <li>
@@ -20,7 +24,7 @@
       <a href="../packages/desafios/desafio1/">Package</a>
     </li>
   </ol>
-</details>
+</details> -->
 
 ## Descripción
-Desafío No. 1
+Desafío No. 1 que compete al Avión
