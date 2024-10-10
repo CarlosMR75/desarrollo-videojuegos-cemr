@@ -39,16 +39,16 @@
 
 * Lección 1
   * > [Prototipo](/prototipo1)
-  * > [Desafio](/desafio1/)
+  * > [Desafio 1](/desafio1/)
   * > [Package](/packages/lecciones/leccion1/prototipo1.unitypackage)
   <!-- * > [Prueba](/prototipo1) -->
 * Lección 2
   * > [Prototipo](/prototipo2)
   <!-- * > [Laboratorio](/prototipo2)-->
   * > [Package](/packages/lecciones/leccion2/ejercicio_carlos_mata.unitypackage)
-  * > [Prueba](/docs/lecciones/leccion2/Leccion2.docx)
+  * > [Prueba](/docs/lecciones/leccion2/Leccion2_Carlos_Mata.pdf)
 * Lección 3
-  * > [Prototipo]
+  * > [Prototipo](/gameRPG/)
   <!-- * > Laboratorio
   * > Desafío
   * > Prueba -->
