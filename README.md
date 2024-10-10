@@ -48,10 +48,10 @@
   * > [Package](/packages/lecciones/leccion2/ejercicio_carlos_mata.unitypackage)
   * > [Prueba](/docs/lecciones/leccion2/Leccion2_Carlos_Mata.pdf)
 * Lección 3
-  * > [Prototipo](/gameRPG/)
-  <!-- * > Laboratorio
-  * > Desafío
-  * > Prueba -->
+  * > [Prototipo P1 animations](/gameRPG/)
+  <!-- * > Laboratorio -->
+  * > [Package](/packages/lecciones/leccion3/leccion3_p1_carlos_mata.unitypackage)
+  * > [Prueba](/docs/lecciones/leccion3/EjercicioRPG_Carlos%20Mata.pdf)
 * Lección 4
   * > [Prototipo]
   <!-- * > Laboratorio
