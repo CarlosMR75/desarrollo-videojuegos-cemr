@@ -61,17 +61,21 @@
   * > [Prueba P1](/docs/lecciones/leccion3/EjercicioRPG_Carlos%20Mata.pdf)
   * > [Prueba P2](/docs/lecciones/leccion3/EjercicioRPG_P2.pdf)
 * Lección 4
-* * > [Prototipo P3](/gameRPG/)
+  * > [Prototipo P3 y P4](/gameRPG/)
   * > [Package P3](/packages/lecciones/leccion4/leccion4_p3_carlos_mata.unitypackage)
-  * > [Package P4](/packages/lecciones/leccion4/)
+  * > [Package P4](/packages/lecciones/leccion4/leccion4_p4_carlos_mata.unitypackage)
   * > [Prueba P3](/docs/lecciones/leccion4/Prototipo4_P3.pdf)
-  * > [Prueba P4](/docs/lecciones/leccion4/)
+  * > [Prueba P4](/docs/lecciones/leccion4/Prototipo4_P4.pdf)
 * Lección 5
-  * > [Prototipo]
+  * > [Prototipo P5](/gameRPG/)
+  * > [Package P5](/packages/lecciones/leccion5/)
+  * > [Package P6](/packages/lecciones/leccion5/)
+  * > [Prueba P5](/docs/lecciones/leccion5/)
+  * > [Prueba P6](/docs/lecciones/leccion5/)
 * VideoJuego
 
 ## Planificación
-
+![Diagrama de Gantt](/Gantt_Las_7_almas_Juego.png)
 
 ## Autores
 Carlos Mata
