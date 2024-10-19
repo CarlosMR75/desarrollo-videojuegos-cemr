@@ -61,7 +61,11 @@
   * > [Prueba P1](/docs/lecciones/leccion3/EjercicioRPG_Carlos%20Mata.pdf)
   * > [Prueba P2](/docs/lecciones/leccion3/EjercicioRPG_P2.pdf)
 * Lección 4
-  * > [Prototipo]
+* * > [Prototipo P3](/gameRPG/)
+  * > [Package P3](/packages/lecciones/leccion4/leccion4_p3_carlos_mata.unitypackage)
+  * > [Package P4](/packages/lecciones/leccion4/)
+  * > [Prueba P3](/docs/lecciones/leccion4/Prototipo4_P3.pdf)
+  * > [Prueba P4](/docs/lecciones/leccion4/)
 * Lección 5
   * > [Prototipo]
 * VideoJuego
