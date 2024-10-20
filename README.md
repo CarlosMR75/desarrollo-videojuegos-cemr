@@ -55,7 +55,7 @@
   * > [Prueba](/docs/lecciones/leccion2/Leccion2_Carlos_Mata.pdf)
   * > [Desafio 2](/desafio2/)
   * > [Desafio 2 - Package](/packages/desafios/desafio2/desafio2_carlos_mata.unitypackage/)
-  * > [Desafio 2 - Package](/docs/desafios/desafio2/Desafio2_Carlos%20Mata.pdf/)
+  * > [Desafio 2 - Prueba](/docs/desafios/desafio2/Desafio2_Carlos%20Mata.pdf/)
 * Lección 3
   * > [Prototipo 3 - P1 y P2 animations](/gameRPG/)
   <!-- * > Laboratorio -->
