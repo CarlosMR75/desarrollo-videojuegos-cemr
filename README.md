@@ -50,28 +50,32 @@
   <!-- * > [Prueba](/prototipo1) -->
 * Lección 2
   * > [Prototipo](/prototipo2)
+  * > [Desafio 2](/desafio2/)
   <!-- * > [Laboratorio](/prototipo2)-->
   * > [Package](/packages/lecciones/leccion2/ejercicio_carlos_mata.unitypackage)
   * > [Prueba](/docs/lecciones/leccion2/Leccion2_Carlos_Mata.pdf)
 * Lección 3
-  * > [Prototipo P1 y P2 animations](/gameRPG/)
+  * > [Prototipo 3 - P1 y P2 animations](/gameRPG/)
   <!-- * > Laboratorio -->
   * > [Package P1](/packages/lecciones/leccion3/leccion3_p1_carlos_mata.unitypackage)
   * > [Package P2](/packages/lecciones/leccion3/leccion3_p2_carlos_mata.unitypackage)
   * > [Prueba P1](/docs/lecciones/leccion3/EjercicioRPG_Carlos%20Mata.pdf)
   * > [Prueba P2](/docs/lecciones/leccion3/EjercicioRPG_P2.pdf)
+  * > [Desafio 3](/desafio3/)
 * Lección 4
   * > [Prototipo P3 y P4](/gameRPG/)
   * > [Package P3](/packages/lecciones/leccion4/leccion4_p3_carlos_mata.unitypackage)
   * > [Package P4](/packages/lecciones/leccion4/leccion4_p4_carlos_mata.unitypackage)
   * > [Prueba P3](/docs/lecciones/leccion4/Prototipo4_P3.pdf)
   * > [Prueba P4](/docs/lecciones/leccion4/Prototipo4_P4.pdf)
+  * > [Desafio 4](/desafio4/)
 * Lección 5
   * > [Prototipo P5](/gameRPG/)
   * > [Package P5](/packages/lecciones/leccion5/)
   * > [Package P6](/packages/lecciones/leccion5/)
   * > [Prueba P5](/docs/lecciones/leccion5/)
   * > [Prueba P6](/docs/lecciones/leccion5/)
+  * > [Desafio 5](/desafio5/)
 * VideoJuego
 
 ## Planificación
