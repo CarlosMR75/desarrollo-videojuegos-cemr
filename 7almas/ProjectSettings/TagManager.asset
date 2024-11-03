@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Piso
+  - Enemigo
+  - Plataforma
+  - Opciones
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Piso
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Fondo
+    uniqueID: 3731110471
+    locked: 0
+  - name: Decoraciones
+    uniqueID: 3830112553
+    locked: 0
+  - name: Suelo
+    uniqueID: 1399446889
+    locked: 0
+  - name: Enemigos
+    uniqueID: 2143594809
+    locked: 0
+  - name: Jugador
+    uniqueID: 2882534499
+    locked: 0
