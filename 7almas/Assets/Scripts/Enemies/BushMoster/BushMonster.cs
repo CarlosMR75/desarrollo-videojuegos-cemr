@@ -36,7 +36,7 @@ public class BushMonster : MonoBehaviour, IDanio
 
     [Header("Control Daño")]
     [SerializeField] private Color colorDaño = new Color(0.3098f, 0.0039f, 0f, 1f);
-    [SerializeField] private float tiempoRestablecerColor = 0.2f; 
+    [SerializeField] private float tiempoRestablecerColor = 0.2f;
 
     private bool estaMuerto = false;
 
@@ -84,7 +84,9 @@ public class BushMonster : MonoBehaviour, IDanio
             // Comenzar ataque si no está ya atacando y si el cooldown ha terminado
             if (!atacando && attackTimer <= 0)
             {
-                Atacar();
+                atacando = true;
+                attackTimer = attackCooldown;  // Reiniciar el cooldown
+                animator.SetBool("Atacando", atacando);
             }
         }
         else
@@ -98,7 +100,7 @@ public class BushMonster : MonoBehaviour, IDanio
             rb2D.MovePosition(rb2D.position + movement * velocidad * Time.deltaTime);
         }
 
-        animator.SetBool("enMovimiento", enMovimiento);        
+        animator.SetBool("enMovimiento", enMovimiento);
     }
 
     public void TomarDanio(float danio)
@@ -107,7 +109,14 @@ public class BushMonster : MonoBehaviour, IDanio
 
         if (vida <= 0)
         {
-            Muerte();
+            estaMuerto = true;
+            animator.SetTrigger("Muerte");
+
+            rb2D.velocity = Vector2.zero;
+            rb2D.isKinematic = true;
+
+            CancelInvoke("DesactivarArma");  // Cancelar cualquier ataque en progreso
+            atacando = false;
         }
         else
         {
@@ -118,7 +127,7 @@ public class BushMonster : MonoBehaviour, IDanio
 
     private void Patrullar()
     {
-        
+
         RaycastHit2D sueloDetectado = Physics2D.Raycast(detectorSuelo.position, Vector2.down, longitudRaycastSuelo, capaSuelo);
         // ? Invierto la dirección pq el enemigo está mirando a la izq por defecto
         RaycastHit2D paredDetectada = Physics2D.Raycast(detectorPared.position, Vector2.right * -1 * transform.localScale.x, longitudRaycastPared, capaSuelo);
@@ -147,21 +156,8 @@ public class BushMonster : MonoBehaviour, IDanio
         }
     }
 
-    private void Atacar()
+    public void Atacar()
     {
-        atacando = true;
-        attackTimer = attackCooldown;  // Reiniciar el cooldown
-        animator.SetBool("Atacando", atacando);
-
-        StartCoroutine(WaitAMoment());
-
-        Invoke("DesactivarArma", 0.5f);
-    }
-
-    private IEnumerator WaitAMoment()
-    {
-        yield return new WaitForSeconds(0.5f);
-
         Collider2D[] objetos = Physics2D.OverlapCircleAll(ControladorAtaque.position, dimensionesAtaque);
 
         foreach (Collider2D collisionador in objetos)
@@ -174,7 +170,6 @@ public class BushMonster : MonoBehaviour, IDanio
         }
     }
 
-    
     private void DesactivarArma()
     {
         atacando = false;
@@ -190,7 +185,6 @@ public class BushMonster : MonoBehaviour, IDanio
 
     private void CambiarColorDanio()
     {
-        // Cambiar color al color de daño
         renderer.material.color = colorDaño;
         StartCoroutine(RestablecerColor());
     }
@@ -204,17 +198,10 @@ public class BushMonster : MonoBehaviour, IDanio
 
     private void Muerte()
     {
-        estaMuerto = true;
-        animator.SetTrigger("Muerte");
-
-        rb2D.velocity = Vector2.zero;
-        rb2D.isKinematic = true;
-
-        CancelInvoke("DesactivarArma");  // Cancelar cualquier ataque en progreso
-        atacando = false;
+        gameObject.SetActive(false);
     }
 
-    
+
     void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
@@ -231,6 +218,6 @@ public class BushMonster : MonoBehaviour, IDanio
 
         // ? Invierto la dirección pq el enemigo está mirando a la izq por defecto
         Gizmos.color = Color.cyan;
-        Gizmos.DrawLine(detectorPared.position, detectorPared.position + Vector3.right * transform.localScale.x * -1 * longitudRaycastPared); 
+        Gizmos.DrawLine(detectorPared.position, detectorPared.position + Vector3.right * transform.localScale.x * -1 * longitudRaycastPared);
     }
 }

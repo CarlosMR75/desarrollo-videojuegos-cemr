@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DiamondGolem : MonoBehaviour, IDanio
 {
-    private Transform jugador;   
+    private Transform jugador;
     private Animator animator;
     private Vector2 movement;
     private Rigidbody2D rb2D;
@@ -38,7 +38,7 @@ public class DiamondGolem : MonoBehaviour, IDanio
     [Header("Control Daño")]
     private Renderer renderer;
     [SerializeField] private Color colorDaño = new Color(0.3098f, 0.0039f, 0f, 1f);
-    [SerializeField] private float tiempoRestablecerColor = 0.2f; 
+    [SerializeField] private float tiempoRestablecerColor = 0.2f;
 
     private bool estaMuerto = false;
 
@@ -87,7 +87,9 @@ public class DiamondGolem : MonoBehaviour, IDanio
             // Comenzar ataque si no está ya atacando y si el cooldown ha terminado
             if (!atacando && attackTimer <= 0)
             {
-                Atacar();
+                atacando = true;
+                attackTimer = 0;  // Reiniciar el cooldown
+                animator.SetBool("Atacando", atacando);
             }
         }
         else
@@ -111,7 +113,14 @@ public class DiamondGolem : MonoBehaviour, IDanio
 
         if (vida <= 0)
         {
-            Muerte();
+            estaMuerto = true;
+            animator.SetTrigger("Muerte");
+
+            rb2D.velocity = Vector2.zero;
+            rb2D.isKinematic = true;
+
+            CancelInvoke("DesactivarArma");  // Cancelar cualquier ataque en progreso
+            atacando = false;
         }
         else
         {
@@ -156,19 +165,6 @@ public class DiamondGolem : MonoBehaviour, IDanio
     //TODO: Control del ataque
     private void Atacar()
     {
-        atacando = true;
-        attackTimer = 0;  // Reiniciar el cooldown
-        animator.SetBool("Atacando", atacando);
-
-        StartCoroutine(WaitAMoment());
-
-        Invoke("DesactivarArma", attackCooldown);
-    }
-
-    private IEnumerator WaitAMoment()
-    {
-        yield return new WaitForSeconds(attackCooldown);
-
         Vector2 size = new Vector2(dimensionesGolpe.x, dimensionesGolpe.y);
 
         Collider2D[] objetos = Physics2D.OverlapBoxAll(golpe.position, size, 0f);
@@ -211,14 +207,7 @@ public class DiamondGolem : MonoBehaviour, IDanio
     //TODO: Control de la muerte
     private void Muerte()
     {
-        estaMuerto = true;
-        animator.SetTrigger("Muerte");
-
-        rb2D.velocity = Vector2.zero;
-        rb2D.isKinematic = true;
-
-        CancelInvoke("DesactivarArma");  // Cancelar cualquier ataque en progreso
-        atacando = false;
+        gameObject.SetActive(false);
     }
 
     //TODO: Gizmos

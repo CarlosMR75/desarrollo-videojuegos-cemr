@@ -42,60 +42,18 @@ public class Skeleton : MonoBehaviour, IDanio
     [Header("Control Daño")]
     private Renderer renderer;
     [SerializeField] private Color colorDaño = new Color(0.3098f, 0.0039f, 0f, 1f);
-    [SerializeField] private float tiempoRestablecerColor = 0.2f; 
+    [SerializeField] private float tiempoRestablecerColor = 0.2f;
 
     private void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         jugador = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-        renderer = GetComponent<Renderer>(); // Obtener el Renderer
+        renderer = GetComponent<Renderer>();
     }
-
-    public void TomarDanio(float danio)
-    {
-        vida -= danio;
-
-        if (vida <= 0)
-        {
-            Muerte();
-        }
-        else
-        {
-            Debug.Log("Recibi daño");
-            CambiarColorDanio();
-        }
-    }
-
-    private void CambiarColorDanio()
-    {
-        // Cambiar color al color de daño
-        renderer.material.color = colorDaño;
-        StartCoroutine(RestablecerColor());
-    }
-
-    private IEnumerator RestablecerColor()
-    {
-        // Esperar un tiempo y luego restaurar el color original
-        yield return new WaitForSeconds(tiempoRestablecerColor);
-        renderer.material.color = Color.white; // Cambia a color original
-    }
-
-    private void Muerte()
-    {
-        estaMuerto = true;
-        animator.SetTrigger("Muerte");
-
-        rb2D.velocity = Vector2.zero;
-        rb2D.isKinematic = true;
-
-        CancelInvoke("DesactivarArma");  // Cancelar cualquier ataque en progreso
-        atacando = false;
-    }
-
+    
     void Update()
     {
-        // Contar el cooldown del ataque
         if (attackTimer > 0)
         {
             attackTimer -= Time.deltaTime;
@@ -130,7 +88,9 @@ public class Skeleton : MonoBehaviour, IDanio
             // Comenzar ataque si no está ya atacando y si el cooldown ha terminado
             if (!atacando && attackTimer <= 0)
             {
-                Atacar();
+                atacando = true;
+                attackTimer = attackCooldown;  // Reiniciar el cooldown
+                animator.SetBool("Atacando", atacando);
             }
         }
         else
@@ -161,19 +121,6 @@ public class Skeleton : MonoBehaviour, IDanio
 
     private void Atacar()
     {
-        atacando = true;
-        attackTimer = attackCooldown;  // Reiniciar el cooldown
-        animator.SetBool("Atacando", atacando);
-
-        StartCoroutine(WaitAMoment());
-
-        Invoke("DesactivarArma", 0.5f);
-    }
-
-    private IEnumerator WaitAMoment()
-    {
-        yield return new WaitForSeconds(0.5f);
-
         Vector2 size = new Vector2(dimensionesEspada.x, dimensionesEspada.y);
 
         Collider2D[] objetos = Physics2D.OverlapBoxAll(arma.position, size, 0f);
@@ -188,10 +135,50 @@ public class Skeleton : MonoBehaviour, IDanio
         }
     }
 
+    
+    public void TomarDanio(float danio)
+    {
+        vida -= danio;
+
+        if (vida <= 0)
+        {
+            estaMuerto = true;
+            animator.SetTrigger("Muerte");
+
+            rb2D.velocity = Vector2.zero;
+            rb2D.isKinematic = true;
+
+            CancelInvoke("DesactivarArma");
+            atacando = false;
+        }
+        else
+        {
+            Debug.Log("Recibi daño");
+            CambiarColorDanio();
+        }
+    }
+
+    private void CambiarColorDanio()
+    {
+        renderer.material.color = colorDaño;
+        StartCoroutine(RestablecerColor());
+    }
+
+    private IEnumerator RestablecerColor()
+    {
+        yield return new WaitForSeconds(tiempoRestablecerColor);
+        renderer.material.color = Color.white;
+    }
+
     private void DesactivarArma()
     {
         atacando = false;
         animator.SetBool("Atacando", atacando);
+    }
+
+    private void Muerte()
+    {
+        gameObject.SetActive(false);
     }
 
     private void Girar()

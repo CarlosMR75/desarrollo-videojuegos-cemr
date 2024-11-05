@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class MenuInicial : MonoBehaviour
 {
     public void Jugar() {
-        SceneManager.LoadScene("SampleScene");//SceneManager.GetActiveScene().buildIndex + 1 -- Para la siguiente escena
+        SceneManager.LoadScene("SeleccionarNivel");//SceneManager.GetActiveScene().buildIndex + 1 -- Para la siguiente escena
     }
 
     public void Opciones()

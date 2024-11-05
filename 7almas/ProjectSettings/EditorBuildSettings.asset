@@ -18,11 +18,20 @@ EditorBuildSettings:
     path: Assets/Scenes/CasaScene.unity
     guid: 93e35060692d4d8429f43f5e982f3cde
   - enabled: 1
+    path: Assets/Scenes/NivelMina.unity
+    guid: 747c750de15a3af4b80f820bc7bb0476
+  - enabled: 1
     path: Assets/Scenes/PuebloScene.unity
     guid: 25c1f6d1abfc1574aa7de6ee04e3a9f3
   - enabled: 1
     path: Assets/Scenes/LevelDemo.unity
     guid: 913a9e32b4184da40b1e426171f46d14
+  - enabled: 1
+    path: Assets/Scenes/SeleccionarNivel.unity
+    guid: d63ff889f6785a243ad54b51de13a0fd
+  - enabled: 1
+    path: Assets/Scenes/SeleccionarPersonaje.unity
+    guid: b7080639a050c4f4eaedbc8ecb995d96
   - enabled: 1
     path: Assets/Scenes/FinalBoss.unity
     guid: 5088a5a08d5b66845b0b9ce9883b2be4
