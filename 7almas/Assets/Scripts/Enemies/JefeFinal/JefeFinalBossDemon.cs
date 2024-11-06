@@ -81,10 +81,10 @@ public class JefeFinalBossDemon : MonoBehaviour, IDanio
     public void Atacar()
     {
         atacando = true;
-        Debug.Log("Atacar");
         animator.SetBool("isWalking", false);
         float[] ataques = { 0.33f, 0.33f, 0.33f };
         float attackIndex = Choose(ataques);
+        Debug.Log("Atacar con: "+attackIndex);
 
         switch (attackIndex)
         {
