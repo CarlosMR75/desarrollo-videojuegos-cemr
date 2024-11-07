@@ -95,7 +95,7 @@ public class PlayerController : MonoBehaviour
             animator.SetBool("saltoDoble", false);
         }
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Salto"))
         {
             salto = true;
         }
@@ -110,7 +110,7 @@ public class PlayerController : MonoBehaviour
             deslizando = false;
         }
 
-        if (Input.GetButtonDown("Fire3"))
+        if (Input.GetButtonDown("Dash"))
         {
             StartCoroutine(Dash());
         }
@@ -229,14 +229,12 @@ public class PlayerController : MonoBehaviour
         }
 
         // Verificar si la altura de los tiles es suficiente
-        Debug.Log(alturaActual);
+        // Debug.Log(alturaActual);
         return alturaActual >= alturaNecesaria;
     }
 
     private void Salto()
     {
-        //Debug.Log("Trate de saltar");
-        //Debug.Log("En Pared: "+ enPared);
         if (!enPared)
         {
             rb2D.velocity = new Vector2(rb2D.velocity.x, fuerzaSalto);
@@ -281,7 +279,6 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator Dash()
     {
-        //Debug.Log("Dash ...");
         sePuedeMover = false;
         puedeHacerDash = false;
         animator.SetBool("Dash", true);

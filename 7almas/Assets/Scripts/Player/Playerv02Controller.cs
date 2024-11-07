@@ -95,7 +95,7 @@ public class Playerv02Controller : MonoBehaviour
         animator.SetBool("saltoDoble", false);
     }
 
-    if (Input.GetButtonDown("Jump"))
+    if (Input.GetButtonDown("Salto"))
     {
         salto = true;
     }
@@ -219,8 +219,6 @@ private void FixedUpdate()
 
     private void Salto()
     {
-        //Debug.Log("Trate de saltar");
-        //Debug.Log("En Pared: "+ enPared);
         if (!enPared)
         {
             rb2D.velocity = new Vector2(rb2D.velocity.x, fuerzaSalto);

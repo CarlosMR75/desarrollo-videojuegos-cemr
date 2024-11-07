@@ -74,6 +74,7 @@
     <Compile Include="Assets\Scripts\UI\MenuOpciones\ControlVolumen.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
+    <Compile Include="Assets\Scripts\Player\DineroController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\Scripts\Player\CombateController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
@@ -93,19 +94,24 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\Scripts\UI\MenuOpciones\ControlBrillo.cs" />
+    <Compile Include="Assets\Scripts\UI\SeleccionPersonaje\MenuSeleccionPersonajes.cs" />
     <Compile Include="Assets\Scripts\Player\VidaController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexJitter.cs" />
+    <Compile Include="Assets\Scripts\InicioJugador.cs" />
     <Compile Include="Assets\Scripts\Enemies\Wizard\Bala\Bala.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\Scripts\UI\Niveles\SeleccionarNivel.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
+    <Compile Include="Assets\Scripts\Player\PuntajeController.cs" />
     <Compile Include="Assets\Scripts\Player\Playerv01Controller.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
+    <Compile Include="Assets\Scripts\UI\SeleccionPersonaje\Personajes.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
+    <Compile Include="Assets\Scripts\UI\SeleccionPersonaje\GameManagerSeleccionarPesonaje.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scripts\Enemies\Wizard\Wizard.cs" />
@@ -128,6 +134,7 @@
     <Compile Include="Assets\Scripts\Enemies\JefeFinal\Projectile\FireBall.cs" />
     <Compile Include="Assets\Scripts\UI\MenuInicial.cs" />
     <Compile Include="Assets\Scripts\Enemies\JefeFinal\Behaviours\Demon_Boss_Idle_Behaviour.cs" />
+    <Compile Include="Assets\Scripts\CameraTargetController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Scripts\Enemies\DiamondGolem\DiamondGolem.cs" />
   </ItemGroup>

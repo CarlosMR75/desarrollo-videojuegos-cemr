@@ -40,6 +40,14 @@ public class DiamondGolem : MonoBehaviour, IDanio
     [SerializeField] private Color colorDaño = new Color(0.3098f, 0.0039f, 0f, 1f);
     [SerializeField] private float tiempoRestablecerColor = 0.2f;
 
+    [Header("Puntos Enemigo")]
+    [SerializeField] private float cantidadPuntos;
+    [SerializeField] private PuntajeController puntaje;
+
+    [Header("Monedas Enemigo")]
+    [SerializeField] private float cantidadMonedas;
+    [SerializeField] private DineroController dinero;
+
     private bool estaMuerto = false;
 
     //TODO: Métodos default
@@ -207,6 +215,8 @@ public class DiamondGolem : MonoBehaviour, IDanio
     //TODO: Control de la muerte
     private void Muerte()
     {
+        puntaje.SumarPuntos(cantidadPuntos);
+        dinero.SumarMonedas(cantidadMonedas);
         gameObject.SetActive(false);
     }
 

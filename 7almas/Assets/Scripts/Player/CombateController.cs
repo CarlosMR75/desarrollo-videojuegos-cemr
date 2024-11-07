@@ -19,7 +19,7 @@ public class CombateController : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if(Input.GetButtonDown("Ataque Principal"))
         {
             Golpe();
         }        

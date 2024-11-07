@@ -13,7 +13,7 @@ public class FireBall : MonoBehaviour
     [SerializeField] private float danioAtaque;
 
     [Header("Desaparecer")]
-    [SerializeField] private float tiempoVida = 5f;
+    [SerializeField] private float tiempoVida = 3f;
     private bool haColisionado = false;
 
     private void Start()

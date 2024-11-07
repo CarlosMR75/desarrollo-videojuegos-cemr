@@ -90,7 +90,7 @@ public class Player01Controller : MonoBehaviour
             animator.SetBool("saltoDoble", false);
         }
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Salto"))
         {
             salto = true;
         }
@@ -188,8 +188,6 @@ public class Player01Controller : MonoBehaviour
 
     private void Salto()
     {
-        //Debug.Log("Trate de saltar");
-        //Debug.Log("En Pared: "+ enPared);
         if (!enPared)
         {
             rb2D.velocity = new Vector2(rb2D.velocity.x, fuerzaSalto);
@@ -234,7 +232,6 @@ public class Player01Controller : MonoBehaviour
 
     private IEnumerator Dash()
     {
-        //Debug.Log("Dash ...");
         sePuedeMover = false;
         puedeHacerDash = false;
         animator.SetBool("Dash", true);

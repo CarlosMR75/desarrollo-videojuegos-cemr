@@ -31,14 +31,13 @@ public class SiguientePiso : MonoBehaviour
         }
     }
 
-        // Este método teletransporta al jugador
+    // Este método teletransporta al jugador
     private void TeleportPlayer()
     {
         if (player != null)
         {
             teleportDestination.y += 17.141f;
             player.transform.position = teleportDestination;
-            //Debug.Log("Jugador teletransportado a: " + teleportDestination);
         }
     }
 
@@ -48,7 +47,6 @@ public class SiguientePiso : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isPlayerInRange = true;
-            //Debug.Log("Jugador en rango de interacción.");
         }
     }
 
@@ -59,7 +57,6 @@ public class SiguientePiso : MonoBehaviour
         {
             isPlayerInRange = false;
             //player = null;
-            //Debug.Log("Jugador fuera de rango de interacción.");
         }
     }
 }

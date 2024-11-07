@@ -39,6 +39,9 @@ EditorBuildSettings:
     path: Assets/Scenes/CasonaScene.unity
     guid: 5262b5f81aed48c488448dd25315eb7f
   - enabled: 1
+    path: Assets/Scenes/NivelPrototipo.unity
+    guid: 5bfa0b0c6f210e5438d39d51b17f2675
+  - enabled: 1
     path: Assets/Scenes/AllEnemies.unity
     guid: 40c5bc837b39cd145906668c3c39b17e
   m_configObjects: {}
