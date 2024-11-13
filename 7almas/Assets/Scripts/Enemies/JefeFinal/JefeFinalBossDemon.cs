@@ -45,17 +45,41 @@ public class JefeFinalBossDemon : MonoBehaviour, IDanio
     private float tiempoEntreAtaques = 2.0f; // tiempo entre ataques
     private float tiempoProximoAtaque = 0f; // controla el tiempo de cada ataque
     private bool enAtaque = false; // controla si el jefe está en medio de un ataque
+    
+    private IEnumerator BuscarJugador(float tiempoMaximo)
+    {
+        float tiempoTranscurrido = 0f;
+
+        while (jugador == null && tiempoTranscurrido < tiempoMaximo)
+        {
+            GameObject jugadorObject = GameObject.FindGameObjectWithTag("Player");
+            if (jugadorObject != null)
+            {
+                jugador = jugadorObject.transform;
+                yield break;
+            }
+
+            tiempoTranscurrido += Time.deltaTime;
+            yield return null;
+        }
+
+        if (jugador == null)
+        {
+            Debug.LogWarning("Jugador no encontrado después de " + tiempoMaximo + " segundos. Verifica que el jugador tenga la etiqueta 'Player' y que esté en la escena.");
+        }
+    }
 
     private void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        jugador = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        StartCoroutine(BuscarJugador(5f));
         renderer = GetComponent<Renderer>();
     }
 
     private void FixedUpdate()
     {
+        if (jugador == null) return;
         if (animator.GetBool("isWalking"))
         {
             float distanciaJugador = Vector2.Distance(transform.position, jugador.position);

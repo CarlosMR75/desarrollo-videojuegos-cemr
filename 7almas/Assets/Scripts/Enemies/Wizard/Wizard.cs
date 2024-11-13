@@ -46,17 +46,40 @@ public class Wizard : MonoBehaviour, IDanio
     [SerializeField] private float tiempoRestablecerColor = 0.2f;
 
     private bool estaMuerto = false;
+    private IEnumerator BuscarJugador(float tiempoMaximo)
+    {
+        float tiempoTranscurrido = 0f;
+
+        while (jugador == null && tiempoTranscurrido < tiempoMaximo)
+        {
+            GameObject jugadorObject = GameObject.FindGameObjectWithTag("Player");
+            if (jugadorObject != null)
+            {
+                jugador = jugadorObject.transform;
+                yield break;
+            }
+
+            tiempoTranscurrido += Time.deltaTime;
+            yield return null;
+        }
+
+        if (jugador == null)
+        {
+            Debug.LogWarning("Jugador no encontrado después de " + tiempoMaximo + " segundos. Verifica que el jugador tenga la etiqueta 'Player' y que esté en la escena.");
+        }
+    }
 
     private void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         renderer = GetComponent<Renderer>();
-        jugador = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        StartCoroutine(BuscarJugador(5f));
     }
 
     private void FixedUpdate()
     {
+        if (jugador == null) return;
         if (estaMuerto || estaDisparando) return; // No moverse si está muerto o disparando
 
         float distanciaJugador = Vector2.Distance(transform.position, jugador.position);

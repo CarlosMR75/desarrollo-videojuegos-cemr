@@ -509,6 +509,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   personajes:
   - {fileID: 11400000, guid: b085f099f5b6ba442a8eeff27fe4acfe, type: 2}
+  - {fileID: 11400000, guid: 8f822f442c7ad8f4881ce8c1f5598b71, type: 2}
+  - {fileID: 11400000, guid: 2bc3459f5e1d9ac4ba5490880395dc07, type: 2}
+  - {fileID: 11400000, guid: e60e07b69adda1048811c3215153e55e, type: 2}
   - {fileID: 11400000, guid: 2f099fceb82d4944f95f91cfd571a218, type: 2}
 --- !u!1 &937204377
 GameObject:

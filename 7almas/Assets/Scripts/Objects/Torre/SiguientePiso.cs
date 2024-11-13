@@ -14,17 +14,40 @@ public class SiguientePiso : MonoBehaviour
     private bool isPlayerInRange = false;
 
     // Referencia al jugador
-    private Transform player;
+    private Transform jugador;
+    private IEnumerator BuscarJugador(float tiempoMaximo)
+    {
+        float tiempoTranscurrido = 0f;
+
+        while (jugador == null && tiempoTranscurrido < tiempoMaximo)
+        {
+            GameObject jugadorObject = GameObject.FindGameObjectWithTag("Player");
+            if (jugadorObject != null)
+            {
+                jugador = jugadorObject.transform;
+                yield break;
+            }
+
+            tiempoTranscurrido += Time.deltaTime;
+            yield return null;
+        }
+
+        if (jugador == null)
+        {
+            Debug.LogWarning("Jugador no encontrado después de " + tiempoMaximo + " segundos. Verifica que el jugador tenga la etiqueta 'Player' y que esté en la escena.");
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        StartCoroutine(BuscarJugador(5f));
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (jugador == null) return;
         if (isPlayerInRange && Input.GetKeyDown(interactionKey))
         {
             TeleportPlayer();
@@ -34,10 +57,10 @@ public class SiguientePiso : MonoBehaviour
     // Este método teletransporta al jugador
     private void TeleportPlayer()
     {
-        if (player != null)
+        if (jugador != null)
         {
             teleportDestination.y += 17.141f;
-            player.transform.position = teleportDestination;
+            jugador.transform.position = teleportDestination;
         }
     }
 

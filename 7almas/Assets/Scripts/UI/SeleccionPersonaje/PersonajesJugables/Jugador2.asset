@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Jugador2
   m_EditorClassIdentifier: 
   personajeJugable: {fileID: 8235756844159945884, guid: 41446ec84d93a6548820d74e5f5901ff, type: 3}
-  imagen: {fileID: 21300000, guid: 3734746de01d2524292f3715a48bed6b, type: 3}
-  nombre: Jugador Sombra
+  imagen: {fileID: 21300000, guid: 0bf4a0bf43f00d342b1cdf60af756a44, type: 3}
+  nombre: Cubito

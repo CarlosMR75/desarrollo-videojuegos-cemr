@@ -43,12 +43,34 @@ public class Skeleton : MonoBehaviour, IDanio
     private Renderer renderer;
     [SerializeField] private Color colorDaño = new Color(0.3098f, 0.0039f, 0f, 1f);
     [SerializeField] private float tiempoRestablecerColor = 0.2f;
+    private IEnumerator BuscarJugador(float tiempoMaximo)
+    {
+        float tiempoTranscurrido = 0f;
+
+        while (jugador == null && tiempoTranscurrido < tiempoMaximo)
+        {
+            GameObject jugadorObject = GameObject.FindGameObjectWithTag("Player");
+            if (jugadorObject != null)
+            {
+                jugador = jugadorObject.transform;
+                yield break;
+            }
+
+            tiempoTranscurrido += Time.deltaTime;
+            yield return null;
+        }
+
+        if (jugador == null)
+        {
+            Debug.LogWarning("Jugador no encontrado después de " + tiempoMaximo + " segundos. Verifica que el jugador tenga la etiqueta 'Player' y que esté en la escena.");
+        }
+    }
 
     private void Start()
     {
         rb2D = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        jugador = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        StartCoroutine(BuscarJugador(5f));
         renderer = GetComponent<Renderer>();
     }
     
@@ -62,6 +84,7 @@ public class Skeleton : MonoBehaviour, IDanio
 
     private void FixedUpdate()
     {
+        if (jugador == null) return;
         if (estaMuerto) return;
 
         float distanciaJugador = Vector2.Distance(transform.position, jugador.position);

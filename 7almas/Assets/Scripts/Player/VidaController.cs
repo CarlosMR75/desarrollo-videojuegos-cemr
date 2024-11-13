@@ -9,25 +9,38 @@ public class VidaController : MonoBehaviour
     [Header("Vida")]
     [SerializeField] private float vida;
     [SerializeField] private float vidaMaxima = 100f;
-    [SerializeField] private BarraDeVida barraDeVida;
+    private BarraDeVida barraDeVida;
 
     private void Start()
     {
-        //vida = vidaMaxima;
-        animator = GetComponent<Animator>();
-        barraDeVida.InicializarBarraDeVida(vida);
-        Debug.Log("Vida:" + vida);
+        // Obtener la referencia de la BarraDeVida del canvas de la escena actual
+        barraDeVida = FindObjectOfType<BarraDeVida>();
+
+        if (barraDeVida != null)
+        {
+            vida = vidaMaxima;
+            animator = GetComponent<Animator>();
+            barraDeVida.InicializarBarraDeVida(vida);
+            Debug.Log("Vida:" + vida);
+        }
+        else
+        {
+            Debug.LogError("No se encontró BarraDeVida en la escena. Asegúrate de que esté presente en el canvas.");
+        }
     }
 
     public void TomarDanio(float danio)
     {
         vida -= danio;
-        barraDeVida.CambiarVidaActual(vida);
-        if(vida <= 0)
+        if (barraDeVida != null)
+        {
+            barraDeVida.CambiarVidaActual(vida);
+        }
+
+        if (vida <= 0)
         {
             animator.SetTrigger("Muerte");
             //Destroy(gameObject);
         }
-
     }
 }

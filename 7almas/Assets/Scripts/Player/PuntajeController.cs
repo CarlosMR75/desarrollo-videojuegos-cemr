@@ -13,12 +13,13 @@ public class PuntajeController : MonoBehaviour
     }
 
     private void Update() {
-        puntos += Time.deltaTime;
-        textMesh.text = puntos.ToString("0");
+        // puntos += Time.deltaTime;
+        // textMesh.text = puntos.ToString("0");
     }
 
     public void SumarPuntos(float puntosEntrada)
     {
         puntos += puntosEntrada;
+        textMesh.text = puntos.ToString("0");
     }
 }
