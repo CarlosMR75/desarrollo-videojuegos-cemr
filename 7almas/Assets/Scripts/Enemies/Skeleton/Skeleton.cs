@@ -43,6 +43,14 @@ public class Skeleton : MonoBehaviour, IDanio
     private Renderer renderer;
     [SerializeField] private Color colorDaño = new Color(0.3098f, 0.0039f, 0f, 1f);
     [SerializeField] private float tiempoRestablecerColor = 0.2f;
+
+    [Header("Puntos Enemigo")]
+    [SerializeField] private float cantidadPuntos;
+    private PuntajeController puntaje;
+
+    [Header("Monedas Enemigo")]
+    [SerializeField] private float cantidadMonedas;
+    private DineroController dinero;
     private IEnumerator BuscarJugador(float tiempoMaximo)
     {
         float tiempoTranscurrido = 0f;

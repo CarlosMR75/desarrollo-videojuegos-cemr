@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelDemo.unity
     guid: 913a9e32b4184da40b1e426171f46d14
   - enabled: 1
+    path: Assets/Scenes/CthuluBoss.unity
+    guid: 8dc593dbdecf0db4fb8ffd4ec8fe6a8c
+  - enabled: 1
     path: Assets/Scenes/SeleccionarNivel.unity
     guid: d63ff889f6785a243ad54b51de13a0fd
   - enabled: 1

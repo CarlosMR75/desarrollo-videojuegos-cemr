@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Abuelo
   m_EditorClassIdentifier: 
   personajeJugable: {fileID: 3945607034306880396, guid: 8d13e9a5357159e45bfa31ec3eb3f684, type: 3}
-  imagen: {fileID: 21300000, guid: 270ab424aa74a054e975f533718e50aa, type: 3}
+  imagen: {fileID: 21300000, guid: 76fcc2bf458cd7f4db021ac7d6c06661, type: 3}
   nombre: El Abuelo

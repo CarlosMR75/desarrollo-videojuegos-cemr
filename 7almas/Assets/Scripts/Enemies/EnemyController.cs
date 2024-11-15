@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class X : MonoBehaviour, IDanio
+public class EnemyController : MonoBehaviour, IDanio
 {
     private Transform jugador;
     private Animator animator;

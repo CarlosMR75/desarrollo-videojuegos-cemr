@@ -35,6 +35,11 @@ public class JefeFinalBossDemon : MonoBehaviour, IDanio
     [SerializeField] private Vector3 dimensionesSmash;
     [SerializeField] private float danioSmash;
 
+    [Header("FireBreath")]
+    [SerializeField] private Transform fireBreath;
+    [SerializeField] private Vector3 dimensionesFireBreath;
+    [SerializeField] private float danioFireBreath;
+
     [Header("Movimiento")]
     [SerializeField] private float velocidad;
 
@@ -83,7 +88,7 @@ public class JefeFinalBossDemon : MonoBehaviour, IDanio
         if (animator.GetBool("isWalking"))
         {
             float distanciaJugador = Vector2.Distance(transform.position, jugador.position);
-            Debug.Log("Distanciajugador: " + distanciaJugador);
+            //Debug.Log("Distanciajugador: " + distanciaJugador);
 
             Vector2 direction = (jugador.position - transform.position).normalized;
 
@@ -245,5 +250,8 @@ public class JefeFinalBossDemon : MonoBehaviour, IDanio
 
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(controladorDisparo.position, radioDisparo);
+
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireCube(fireBreath.position, dimensionesFireBreath);
     }
 }

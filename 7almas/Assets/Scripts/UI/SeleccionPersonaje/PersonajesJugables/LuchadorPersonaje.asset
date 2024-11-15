@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: LuchadorPersonaje
   m_EditorClassIdentifier: 
   personajeJugable: {fileID: 7969953539636683390, guid: ea542fece23cddb41aa2c605e94ff595, type: 3}
-  imagen: {fileID: 21300000, guid: 3d94aa44d4e48ce458ff6449fdf50984, type: 3}
+  imagen: {fileID: 21300000, guid: eaab896feaf8f5742963b8b8d512789b, type: 3}
   nombre: "M\xE1scara Plateada"

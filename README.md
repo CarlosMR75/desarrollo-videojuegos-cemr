@@ -73,10 +73,10 @@
   * > [Desafio 4](/desafio4/)
 * Lección 5
   * > [Prototipo P5](/gameRPG/)
-  * > [Package P5](/packages/lecciones/leccion5/)
-  * > [Package P6](/packages/lecciones/leccion5/)
-  * > [Prueba P5](/docs/lecciones/leccion5/)
-  * > [Prueba P6](/docs/lecciones/leccion5/)
+  * > [Package P5](/packages/lecciones/leccion5/leccion5_carlos_mata.unitypackage)
+  * > [Package P6](/packages/lecciones/leccion5/leccion5_carlos_mata.unitypackage)
+  * > [Prueba P5](/docs/lecciones/leccion5/Prototipo5_P5.pdf)
+  * > [Prueba P6](/docs/lecciones/leccion5/Prototipo5_P6.pdf)
   * > [Desafio 5](/desafio5/)
 * VideoJuego
 

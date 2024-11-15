@@ -15,7 +15,7 @@ public class Demon_Boss_Idle_Behaviour : StateMachineBehaviour
         {
             case 0.0f:
                 animator.SetTrigger("SpellHandAttack");
-                Debug.Log("Trigger SpellHandAttack activado");
+//                Debug.Log("Trigger SpellHandAttack activado");
                 break;
             case 1.0f:
                 animator.SetTrigger("SpellAttack");

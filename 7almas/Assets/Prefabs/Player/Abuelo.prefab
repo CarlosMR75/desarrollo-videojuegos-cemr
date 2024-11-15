@@ -237,7 +237,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 1.2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -274,8 +274,8 @@ MonoBehaviour:
   controladorPared: {fileID: 1002794350659809327}
   dimensionesCajaPared: {x: 0.33, y: 2.08, z: 0}
   velocidadDeslizar: 0.25
-  fuerzaSaltoParedX: 5
-  fuerzaSaltoParedY: 6
+  fuerzaSaltoParedX: 8
+  fuerzaSaltoParedY: 10
   tirmpoSaltoPared: 0.2
   velocidadDash: 30
   tiempoDash: 0.2
@@ -312,7 +312,7 @@ MonoBehaviour:
   tamanioCajaGolpe: {x: 2.2, y: 0.5}
   danioGolpe: 50
   controladorGolpeSecundario: {fileID: 5464961244471334485}
-  rango: 5
+  rango: 8
   efectoImpacto: {fileID: 5211876612628467680, guid: 0f1288216508ab4469d96efebd1d7478, type: 3}
   danioGolpeSecundario: 20
   offsetDisparoX: 1.5

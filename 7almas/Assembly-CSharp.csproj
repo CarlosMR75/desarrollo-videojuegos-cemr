@@ -66,12 +66,14 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Player\Playerv02Controller.cs" />
     <Compile Include="Assets\Scripts\Player\CombateAbueloController.cs" />
+    <Compile Include="Assets\Scripts\Enemies\EnemyController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\Scripts\UI\MenuOpciones\LogicaEntreEscenas.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
     <Compile Include="Assets\Scripts\Enemies\Skeleton\Skeleton.cs" />
+    <Compile Include="Assets\Scripts\UI\SeleccionPersonaje\AjustarTamanioImagen.cs" />
     <Compile Include="Assets\Scripts\UI\MenuOpciones\ControlVolumen.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
@@ -83,9 +85,11 @@
     <Compile Include="Assets\Scripts\Player\Playerv1Controller.cs" />
     <Compile Include="Assets\Scripts\UI\MenuOpciones\ControlCalidad.cs" />
     <Compile Include="Assets\Scripts\UI\MenuOpciones\MenuOpciones.cs" />
+    <Compile Include="Assets\Scripts\UI\PanelFinalNivel.cs" />
     <Compile Include="Assets\Scripts\Enemies\JefeFinal\Behaviours\Demon_Boss_Walk_Behaviour.cs" />
     <Compile Include="Assets\Scripts\UI\MenuOpciones\LogicaOpciones.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\Scripts\Objects\Checkpoint\Checkpoint.cs" />
     <Compile Include="Assets\Scripts\Enemies\Skeleton\SkeletonWhite.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
@@ -126,8 +130,8 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
     <Compile Include="Assets\Scripts\UI\BarraDeVida.cs" />
     <Compile Include="Assets\Scripts\Player\ControlPlataforma.cs" />
+    <Compile Include="Assets\Scripts\UI\MejoresPuntuaciones.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
-    <Compile Include="Assets\Scripts\Enemies\EnemieController.cs" />
     <Compile Include="Assets\Scripts\UI\MenuOpciones\ControllFullScreen.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\UI\MenuOpciones\ControladorOpciones.cs" />
@@ -135,6 +139,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\DeadRevolver\PixelPrototypePlayerSprites\Demo\Scripts\DemoUIManager.cs" />
     <Compile Include="Assets\DeadRevolver\PixelPrototypePlayerSprites\Demo\Scripts\PlayerPreviewManager.cs" />
+    <Compile Include="Assets\Scripts\Enemies\JefeFinal\Projectile\FireBreath.cs" />
     <Compile Include="Assets\Scripts\Enemies\JefeFinal\Projectile\FireBall.cs" />
     <Compile Include="Assets\Scripts\UI\MenuInicial.cs" />
     <Compile Include="Assets\Scripts\Enemies\JefeFinal\Behaviours\Demon_Boss_Idle_Behaviour.cs" />
