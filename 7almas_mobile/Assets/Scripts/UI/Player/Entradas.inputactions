@@ -1,0 +1,142 @@
+{
+    "name": "Entradas",
+    "maps": [
+        {
+            "name": "Movimiento",
+            "id": "3fe14220-a207-4265-99cc-91dc127c7efc",
+            "actions": [
+                {
+                    "name": "Salto",
+                    "type": "PassThrough",
+                    "id": "2178b45e-9613-459c-a65a-f6b98b7795e2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Dash",
+                    "type": "PassThrough",
+                    "id": "ff67bcd8-f036-4ffa-a1d4-c8b7c13a7c3d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "80b52e0b-c93c-41d3-bb02-06569f607346",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Salto",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0b82fd5a-5dd3-4d6e-b596-2b039dff3264",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Gameplay",
+            "id": "39f9bcb3-7a7a-49b4-89cc-05e292ba868c",
+            "actions": [
+                {
+                    "name": "AtaquePrincipal",
+                    "type": "PassThrough",
+                    "id": "3ac1a180-6857-48a3-85cd-058a7c264ce6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AtaqueSecundario",
+                    "type": "PassThrough",
+                    "id": "08f5b95b-3af7-483f-b60d-adcb61105b4b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Pausar",
+                    "type": "PassThrough",
+                    "id": "33404645-f83a-4a2e-a2f7-673e281b73f1",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Interactuar",
+                    "type": "Button",
+                    "id": "fdbed439-a718-4139-8e6d-5ed9bda8004c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "bacfbc07-5565-43c8-ba30-0631fcf99d3f",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AtaqueSecundario",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9cb787dd-0bbc-4dae-bee4-9670fe06b618",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AtaquePrincipal",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8035f6ab-24d8-4da4-9a38-4b226683238e",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pausar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "08a556e9-fa5e-4ef5-ab37-a534a1a1c33b",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interactuar",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
